@@ -9,13 +9,13 @@ public class Soldat {
     int y;
     String direccio;
 
-    public Soldat(GImage imatge, int x, int y) {
-
+    public Soldat(GImage imatge) {
         this.imatge = imatge;
-        this.x = x;
-        this.y = y;
-    }
 
+    }
+    public GImage getImatge() {
+        return imatge;
+    }
 
 
 }
