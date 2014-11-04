@@ -1,27 +1,36 @@
 package net.mauro;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 public class Exercit {
 
      static ArrayList<Soldat> soldats1 = new ArrayList<>();
      static ArrayList<Soldat> soldats2 = new ArrayList<>();
-    public void afegirSoldat(Soldat soldat) {
 
-        //ArrayList<Soldat> soldats = new ArrayList<>();
-        soldats1.add(soldat);
-        soldats2.add(soldat);
+
+
+    public void afegirSoldat(Soldat soldatExercit1, Soldat soldatExercit2) {
+
+
+        soldats1.add(soldatExercit1);
+        soldats2.add(soldatExercit2);
 
 
     }
-    public static void formar(){
 
-        for(int i=0;i<soldats1.size();i++){
-            soldats1.get(i).getImatge().setLocation(0,0);
-        }
-        for(int i=0;i<soldats2.size();i++){
-            soldats2.get(i).getImatge().setLocation(300,0);
-        }
+    public void Endavant(){
+
+        Exercit exercit = new Exercit();
+        Random rn = new Random();
+        int moure = rn.nextInt(exercit.soldats1.size());
+
+
+        System.out.println(moure);
+            exercit.soldats2.get(moure).mou(exercit);
+
+    }
+
 
     }
 
@@ -33,4 +42,4 @@ public class Exercit {
 
 
 
-}
+
