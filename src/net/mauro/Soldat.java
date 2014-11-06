@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Random;
 
 import acm.graphics.GImage;
+import acm.graphics.GRectangle;
 
 public class Soldat {
 
@@ -48,14 +49,27 @@ public class Soldat {
     public void setArribat(boolean arribat) {
         this.arribat = arribat;
     }
+
+    public boolean Morts(Soldat soldat){
+
+        if(this.Rectangle().intersects(soldat.Rectangle())){
+            return true;
+        }else{
+            return false;
+        }
+
+
+    }
+    public GRectangle Rectangle(){
+        return getImatge().getBounds();
+
+    }
     public void mouExercit1(){
-
-
 
              if(desti< 1000-this.imatge.getWidth()){
                  this.arribat = false;
-                 this.getImatge().move(20, 0);
-                 this.getImatge().pause(45);
+                 this.getImatge().move(10, 0);
+                 this.getImatge().pause(5);
 
              }else{
                  this.arribat = true;
@@ -72,17 +86,15 @@ public class Soldat {
     public void mouExercit2(){
 
 
-
-
         if(desti >= 0){
             this.arribat = false;
 
-            this.getImatge().move(-20, 0);
-            this.getImatge().pause(45);
+            this.getImatge().move(-10, 0);
+            this.getImatge().pause(5);
 
         }else{
             this.arribat = true;
-            
+
         }
 
         desti=this.getImatge().getX();

@@ -28,16 +28,14 @@ public class Exercit {
 
             int moure = rn.nextInt(soldats1.size());
             soldats1.get(moure).mouExercit1();
+            int moure2 = rn.nextInt(soldats2.size());
+            soldats2.get(moure2).mouExercit2();
+            System.out.println(soldats1.get(moure).Morts(soldats2.get(moure2)));
 
         }
 
-        for(int i=0;i<soldats2.size();i++){
-
-            int moure = rn.nextInt(soldats2.size());
-            soldats2.get(moure).mouExercit2();
-
         }
-        }
+
 
 
 

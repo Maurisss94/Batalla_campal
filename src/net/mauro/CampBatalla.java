@@ -74,19 +74,21 @@ public class CampBatalla {
 
     }
 
+    OrdreMoure();
 
-
-    while(!exercit1Arriben()||!exercit2Arriben()){
-        MouExercit();
-
-    }
 
 
     }
-    public void MouExercit(){
-        Exercit.Endavant();
 
+
+    public void OrdreMoure(){
+        while(!exercit1Arriben()||!exercit2Arriben()){
+            Exercit.Endavant();
+
+
+        }
     }
+
 
     public boolean exercit1Arriben(){
         int cont=0;
@@ -116,6 +118,8 @@ public class CampBatalla {
         }
         return false;
     }
+
+
 
 
 
