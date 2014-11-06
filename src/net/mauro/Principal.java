@@ -15,7 +15,7 @@ public class Principal extends GraphicsProgram {
 
 
         for(int i=0;i<15;i++){
-            Soldat soldat1 = new Soldat(new GImage("soldat.jpg"));
+            Soldat soldat1 = new Soldat(new GImage("soldat.png"));
             Soldat soldat2 = new Soldat(new GImage("soldat2.png"));
             exercit1.afegirSoldat(soldat1, soldat2);
 
@@ -32,13 +32,8 @@ public class Principal extends GraphicsProgram {
 
         crearExercit();
 
-        camp.afegirExercits(this);
-
-
-
-
-
-
+        camp.afegirExercit1(this);
+        camp.afegirExercit2(this);
 
 
 

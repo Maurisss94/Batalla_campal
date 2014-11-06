@@ -11,6 +11,8 @@ public class Soldat {
     double x;
     double y;
     String direccio;
+    double desti;
+    boolean arribat;
 
     public Soldat(GImage imatge) {
         this.imatge = imatge;
@@ -33,23 +35,63 @@ public class Soldat {
     public void setY(double y) {
         this.y = y;
     }
+    public double getDesti() {
+        return desti;
+    }
+    public void setDesti(double desti) {
+        this.desti = desti;
+    }
+
+    public boolean isArribat() {
+        return arribat;
+    }
+    public void setArribat(boolean arribat) {
+        this.arribat = arribat;
+    }
+    public void mouExercit1(){
 
 
 
-    public void mou(Exercit exercit){
+             if(desti< 1000-this.imatge.getWidth()){
+                 this.arribat = false;
+                 this.getImatge().move(20, 0);
+                 this.getImatge().pause(45);
 
-        Random rn = new Random();
-        int moure = rn.nextInt(exercit.soldats1.size());
-        
-        	exercit.soldats1.get(moure).getImatge().move(15, 0);
-            exercit.soldats1.get(moure).getImatge().pause(500);
-        
-            
+             }else{
+                 this.arribat = true;
+                 this.getImatge().move(0, 0);
+             }
 
+             desti=this.getImatge().getX();
+
+             this.setX(desti);
 
 
 
     }
+    public void mouExercit2(){
+
+
+
+
+        if(desti >= 0){
+            this.arribat = false;
+
+            this.getImatge().move(-20, 0);
+            this.getImatge().pause(45);
+
+        }else{
+            this.arribat = true;
+            
+        }
+
+        desti=this.getImatge().getX();
+        this.setX(desti);
+
+
+
+
+}
 
 
 }

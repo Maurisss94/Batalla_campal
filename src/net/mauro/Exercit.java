@@ -19,20 +19,33 @@ public class Exercit {
 
     }
 
-    public void Endavant(){
+    public static void Endavant(){
 
-        Exercit exercit = new Exercit();
         Random rn = new Random();
-        int moure = rn.nextInt(exercit.soldats1.size());
 
 
-        System.out.println(moure);
-            exercit.soldats2.get(moure).mou(exercit);
+        for(int i=0;i<soldats1.size();i++){
+
+            int moure = rn.nextInt(soldats1.size());
+            soldats1.get(moure).mouExercit1();
+
+        }
+
+        for(int i=0;i<soldats2.size();i++){
+
+            int moure = rn.nextInt(soldats2.size());
+            soldats2.get(moure).mouExercit2();
+
+        }
+        }
+
+
+
 
     }
 
 
-    }
+
 
 
 
